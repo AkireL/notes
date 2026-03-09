@@ -1,6 +1,6 @@
 
 import { renderMarkdown } from "./markdown";
-import { Note } from "./Notes";
+import { Note } from "./note";
 
 /**
  * Muestra el textarea de editor y el preview

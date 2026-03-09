@@ -1,4 +1,4 @@
-import { isEmpty, deriveTitle, truncateContent } from "./Strings";
+import { isEmpty, deriveTitle, truncateContent } from "./string";
 import { saveToStorage, loadFromStorage } from "./storage";
 
 function generateId():number {

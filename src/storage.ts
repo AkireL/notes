@@ -1,5 +1,5 @@
 
-import { Note } from "./Notes";
+import { Note } from "./note";
 
 const KEY_STORAGE = "libreta_notes";
 

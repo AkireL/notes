@@ -1,5 +1,5 @@
-import { Libreta, type Store } from "./Notes";
-import { formatUnicode } from "./Strings";
+import { Libreta, type Store } from "./note";
+import { formatUnicode } from "./string";
 import { showMessage } from "./messages";
 import { renderNoteList, renderEditor, renderPreview } from "./render.js";
 
