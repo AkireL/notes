@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Notas Markdown</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%232563eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23a)'/%3E%3Cpath d='M75 55.4V78a2 2 0 0 1-2 2H27a2 2 0 0 1-2-2V55.4h50Zm-11 5H36v3h28v-3Zm0 8H36v3h28v-3Z' fill='%23fff'/%3E%3Cpath d='m50 20-5 8h10l-5-8Z' fill='%23a7f3d0'/%3E%3Cpath d='M49 26v24a1 1 0 0 0 1 1 1 1 0 0 0 1-1V26h-2Z' fill='%23a7f3d0'/%3E%3C/svg%3E">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Sistema de Notas Markdown</h1>
+        <div id="message-container" class="message"></div>
+      </header>
+
+      <div class="main-content">
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <h2>Mis Notas</h2>
+            <button id="new-note-button" class="btn btn-primary">Nueva Nota</button>
+            <button id="delete-note-button" class="btn btn-danger">Eliminar</button>
+          </div>
+          <div id="note-list" class="note-list"></div>
+        </aside>
+
+        <main class="editor-section" id="editor-section" style="display: none">
+          <div class="editor-header">
+            <h2>Editor</h2>
+            <div class="editor-actions">
+              <button id="save-note-button" class="btn btn-success">Guardar</button>
+            </div>
+          </div>
+          <textarea
+            id="editor-textarea"
+            class="editor-textarea"
+            placeholder="Escribe tu nota en Markdown aquí..."
+          ></textarea>
+        </main>
+
+        <section class="preview-section" id="preview-section" style="display: none">
+          <div class="preview-header">
+            <h2>Preview</h2>
+            <button id="copy-unicode-button" class="btn btn-secondary">Copiar para LinkedIn</button>
+          </div>
+          <div id="preview-container" class="preview-container"></div>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js"></script>
+    <script type="module" src="./src/app.ts"></script>
+  </body>
+</html>
